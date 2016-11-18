@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jbt.dao.DriveLogInfoMapper" >
+ <resultMap id="BaseResultMap" type="com.jbt.bean.DriveLogInfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="sn" property="sn" jdbcType="VARCHAR" />
+    <result column="totalRavelTime" property="totalraveltime" jdbcType="INTEGER" />
+    <result column="mileage" property="mileage" jdbcType="VARCHAR" />
+    <result column="totalMileage" property="totalmileage" jdbcType="REAL" />
+    <result column="innage" property="innage" jdbcType="VARCHAR" />
+    <result column="totalOil" property="totaloil" jdbcType="VARCHAR" />
+    <result column="instantaneousFuel" property="instantaneousfuel" jdbcType="REAL" />
+    <result column="hundredKmFuel" property="hundredkmfuel" jdbcType="REAL" />
+    <result column="averageSpeed" property="averagespeed" jdbcType="REAL" />
+    <result column="idlelong" property="idlelong" jdbcType="INTEGER" />
+    <result column="hardaccelerationTimes" property="hardaccelerationtimes" jdbcType="INTEGER" />
+    <result column="rapiddecelerationTimes" property="rapiddecelerationtimes" jdbcType="INTEGER" />
+    <result column="departureTime" property="departuretime" jdbcType="VARCHAR" />
+    <result column="arriveTime" property="arrivetime" jdbcType="VARCHAR" />
+    <result column="fromPos" property="frompos" jdbcType="VARCHAR" />
+    <result column="toPos" property="topos" jdbcType="VARCHAR" />
+    <result column="fromPlace" property="fromplace" jdbcType="VARCHAR" />
+    <result column="destination" property="destination" jdbcType="VARCHAR" />
+    <result column="saveTime" property="savetime" jdbcType="VARCHAR" />
+    <result column="State" property="state" jdbcType="INTEGER" />
+    <result column="driverName" property="drivername" jdbcType="VARCHAR" />
+    <result column="plateNumber" property="platenumber" jdbcType="VARCHAR" />
+    <result column="maxSpeed" property="maxspeed" jdbcType="INTEGER" />
+    <result column="maxVelocity" property="maxvelocity" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, sn, totalRavelTime, mileage, totalMileage, innage, totalOil, instantaneousFuel, 
+    hundredKmFuel, averageSpeed, idlelong, hardaccelerationTimes, rapiddecelerationTimes, 
+    departureTime, arriveTime, fromPos, toPos, fromPlace, destination, saveTime, State, 
+    driverName, plateNumber, maxSpeed, maxVelocity
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from drive_log_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from drive_log_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.jbt.bean.DriveLogInfo" >
+    insert into drive_log_info (id, sn, totalRavelTime, 
+      mileage, totalMileage, innage, 
+      totalOil, instantaneousFuel, hundredKmFuel, 
+      averageSpeed, idlelong, hardaccelerationTimes, 
+      rapiddecelerationTimes, departureTime, 
+      arriveTime, fromPos, toPos, 
+      fromPlace, destination, saveTime, 
+      State, driverName, plateNumber, 
+      maxSpeed, maxVelocity)
+    values (#{id,jdbcType=INTEGER}, #{sn,jdbcType=VARCHAR}, #{totalraveltime,jdbcType=INTEGER}, 
+      #{mileage,jdbcType=VARCHAR}, #{totalmileage,jdbcType=REAL}, #{innage,jdbcType=VARCHAR}, 
+      #{totaloil,jdbcType=VARCHAR}, #{instantaneousfuel,jdbcType=REAL}, #{hundredkmfuel,jdbcType=REAL}, 
+      #{averagespeed,jdbcType=REAL}, #{idlelong,jdbcType=INTEGER}, #{hardaccelerationtimes,jdbcType=INTEGER}, 
+      #{rapiddecelerationtimes,jdbcType=INTEGER}, #{departuretime,jdbcType=VARCHAR}, 
+      #{arrivetime,jdbcType=VARCHAR}, #{frompos,jdbcType=VARCHAR}, #{topos,jdbcType=VARCHAR}, 
+      #{fromplace,jdbcType=VARCHAR}, #{destination,jdbcType=VARCHAR}, #{savetime,jdbcType=VARCHAR}, 
+      #{state,jdbcType=INTEGER}, (select driverName from motorcade.car_info where sn = #{sn}), (select plateNumber from motorcade.car_info where sn = #{sn}), 
+      #{maxspeed,jdbcType=INTEGER}, #{maxvelocity,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.jbt.bean.DriveLogInfo" >
+    insert into drive_log_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="sn != null" >
+        sn,
+      </if>
+      <if test="totalraveltime != null" >
+        totalRavelTime,
+      </if>
+      <if test="mileage != null" >
+        mileage,
+      </if>
+      <if test="totalmileage != null" >
+        totalMileage,
+      </if>
+      <if test="innage != null" >
+        innage,
+      </if>
+      <if test="totaloil != null" >
+        totalOil,
+      </if>
+      <if test="instantaneousfuel != null" >
+        instantaneousFuel,
+      </if>
+      <if test="hundredkmfuel != null" >
+        hundredKmFuel,
+      </if>
+      <if test="averagespeed != null" >
+        averageSpeed,
+      </if>
+      <if test="idlelong != null" >
+        idlelong,
+      </if>
+      <if test="hardaccelerationtimes != null" >
+        hardaccelerationTimes,
+      </if>
+      <if test="rapiddecelerationtimes != null" >
+        rapiddecelerationTimes,
+      </if>
+      <if test="departuretime != null" >
+        departureTime,
+      </if>
+      <if test="arrivetime != null" >
+        arriveTime,
+      </if>
+      <if test="frompos != null" >
+        fromPos,
+      </if>
+      <if test="topos != null" >
+        toPos,
+      </if>
+      <if test="fromplace != null" >
+        fromPlace,
+      </if>
+      <if test="destination != null" >
+        destination,
+      </if>
+      <if test="savetime != null" >
+        saveTime,
+      </if>
+      <if test="state != null" >
+        State,
+      </if>
+      <if test="drivername != null" >
+        driverName,
+      </if>
+      <if test="platenumber != null" >
+        plateNumber,
+      </if>
+      <if test="maxspeed != null" >
+        maxSpeed,
+      </if>
+      <if test="maxvelocity != null" >
+        maxVelocity,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="sn != null" >
+        #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="totalraveltime != null" >
+        #{totalraveltime,jdbcType=INTEGER},
+      </if>
+      <if test="mileage != null" >
+        #{mileage,jdbcType=VARCHAR},
+      </if>
+      <if test="totalmileage != null" >
+        #{totalmileage,jdbcType=REAL},
+      </if>
+      <if test="innage != null" >
+        #{innage,jdbcType=VARCHAR},
+      </if>
+      <if test="totaloil != null" >
+        #{totaloil,jdbcType=VARCHAR},
+      </if>
+      <if test="instantaneousfuel != null" >
+        #{instantaneousfuel,jdbcType=REAL},
+      </if>
+      <if test="hundredkmfuel != null" >
+        #{hundredkmfuel,jdbcType=REAL},
+      </if>
+      <if test="averagespeed != null" >
+        #{averagespeed,jdbcType=REAL},
+      </if>
+      <if test="idlelong != null" >
+        #{idlelong,jdbcType=INTEGER},
+      </if>
+      <if test="hardaccelerationtimes != null" >
+        #{hardaccelerationtimes,jdbcType=INTEGER},
+      </if>
+      <if test="rapiddecelerationtimes != null" >
+        #{rapiddecelerationtimes,jdbcType=INTEGER},
+      </if>
+      <if test="departuretime != null" >
+        #{departuretime,jdbcType=VARCHAR},
+      </if>
+      <if test="arrivetime != null" >
+        #{arrivetime,jdbcType=VARCHAR},
+      </if>
+      <if test="frompos != null" >
+        #{frompos,jdbcType=VARCHAR},
+      </if>
+      <if test="topos != null" >
+        #{topos,jdbcType=VARCHAR},
+      </if>
+      <if test="fromplace != null" >
+        #{fromplace,jdbcType=VARCHAR},
+      </if>
+      <if test="destination != null" >
+        #{destination,jdbcType=VARCHAR},
+      </if>
+      <if test="savetime != null" >
+        #{savetime,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="drivername != null" >
+        #{drivername,jdbcType=VARCHAR},
+      </if>
+      <if test="platenumber != null" >
+        #{platenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="maxspeed != null" >
+        #{maxspeed,jdbcType=INTEGER},
+      </if>
+      <if test="maxvelocity != null" >
+        #{maxvelocity,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jbt.bean.DriveLogInfo" >
+    update drive_log_info
+    <set >
+      <if test="sn != null" >
+        sn = #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="totalraveltime != null" >
+        totalRavelTime = #{totalraveltime,jdbcType=INTEGER},
+      </if>
+      <if test="mileage != null" >
+        mileage = #{mileage,jdbcType=VARCHAR},
+      </if>
+      <if test="totalmileage != null" >
+        totalMileage = #{totalmileage,jdbcType=REAL},
+      </if>
+      <if test="innage != null" >
+        innage = #{innage,jdbcType=VARCHAR},
+      </if>
+      <if test="totaloil != null" >
+        totalOil = #{totaloil,jdbcType=VARCHAR},
+      </if>
+      <if test="instantaneousfuel != null" >
+        instantaneousFuel = #{instantaneousfuel,jdbcType=REAL},
+      </if>
+      <if test="hundredkmfuel != null" >
+        hundredKmFuel = #{hundredkmfuel,jdbcType=REAL},
+      </if>
+      <if test="averagespeed != null" >
+        averageSpeed = #{averagespeed,jdbcType=REAL},
+      </if>
+      <if test="idlelong != null" >
+        idlelong = #{idlelong,jdbcType=INTEGER},
+      </if>
+      <if test="hardaccelerationtimes != null" >
+        hardaccelerationTimes = #{hardaccelerationtimes,jdbcType=INTEGER},
+      </if>
+      <if test="rapiddecelerationtimes != null" >
+        rapiddecelerationTimes = #{rapiddecelerationtimes,jdbcType=INTEGER},
+      </if>
+      <if test="departuretime != null" >
+        departureTime = #{departuretime,jdbcType=VARCHAR},
+      </if>
+      <if test="arrivetime != null" >
+        arriveTime = #{arrivetime,jdbcType=VARCHAR},
+      </if>
+      <if test="frompos != null" >
+        fromPos = #{frompos,jdbcType=VARCHAR},
+      </if>
+      <if test="topos != null" >
+        toPos = #{topos,jdbcType=VARCHAR},
+      </if>
+      <if test="fromplace != null" >
+        fromPlace = #{fromplace,jdbcType=VARCHAR},
+      </if>
+      <if test="destination != null" >
+        destination = #{destination,jdbcType=VARCHAR},
+      </if>
+      <if test="savetime != null" >
+        saveTime = #{savetime,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        State = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="drivername != null" >
+        driverName = #{drivername,jdbcType=VARCHAR},
+      </if>
+      <if test="platenumber != null" >
+        plateNumber = #{platenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="maxspeed != null" >
+        maxSpeed = #{maxspeed,jdbcType=INTEGER},
+      </if>
+      <if test="maxvelocity != null" >
+        maxVelocity = #{maxvelocity,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jbt.bean.DriveLogInfo" >
+    update drive_log_info
+    set sn = #{sn,jdbcType=VARCHAR},
+      totalRavelTime = #{totalraveltime,jdbcType=INTEGER},
+      mileage = #{mileage,jdbcType=VARCHAR},
+      totalMileage = #{totalmileage,jdbcType=REAL},
+      innage = #{innage,jdbcType=VARCHAR},
+      totalOil = #{totaloil,jdbcType=VARCHAR},
+      instantaneousFuel = #{instantaneousfuel,jdbcType=REAL},
+      hundredKmFuel = #{hundredkmfuel,jdbcType=REAL},
+      averageSpeed = #{averagespeed,jdbcType=REAL},
+      idlelong = #{idlelong,jdbcType=INTEGER},
+      hardaccelerationTimes = #{hardaccelerationtimes,jdbcType=INTEGER},
+      rapiddecelerationTimes = #{rapiddecelerationtimes,jdbcType=INTEGER},
+      departureTime = #{departuretime,jdbcType=VARCHAR},
+      arriveTime = #{arrivetime,jdbcType=VARCHAR},
+      fromPos = #{frompos,jdbcType=VARCHAR},
+      toPos = #{topos,jdbcType=VARCHAR},
+      fromPlace = #{fromplace,jdbcType=VARCHAR},
+      destination = #{destination,jdbcType=VARCHAR},
+      saveTime = #{savetime,jdbcType=VARCHAR},
+      State = #{state,jdbcType=INTEGER},
+      driverName = #{drivername,jdbcType=VARCHAR},
+      plateNumber = #{platenumber,jdbcType=VARCHAR},
+      maxSpeed = #{maxspeed,jdbcType=INTEGER},
+      maxVelocity = #{maxvelocity,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+ 
+  <!-- 根据条件查询 行驶记录 -->
+  <select id="getPageList"  resultMap="BaseResultMap">
+  	select
+  		d.*
+    from drive_log_info d inner join car_info c on d.sn = c.sn
+    where 
+    	c.sectorInfo in (select id from sector_info where managerInfo = #{managerId})
+  	  <if test="driveLogInfo.drivername != null and driveLogInfo.drivername != '' ">  
+           and d.drivername LIKE CONCAT(CONCAT('%', #{driveLogInfo.drivername}),'%') 
+      </if>
+      <if test="driveLogInfo.platenumber != null and driveLogInfo.platenumber != '' ">  
+          and d.platenumber LIKE CONCAT(CONCAT('%', #{driveLogInfo.platenumber}),'%')  
+      </if>
+      <if test="driveLogInfo.departuretime != null and driveLogInfo.departuretime != '' ">  
+          and d.departureTime BETWEEN #{driveLogInfo.departuretime} AND #{driveLogInfo.arrivetime}
+      </if>
+      <if test="sectorId != null and sectorId != 0 ">  
+          and c.sectorInfo = #{sectorId}
+      </if>
+	  order by saveTime desc 
+	 limit #{start},#{pageSize} 
+  </select>
+  <!-- 根据条件查询记录条数-->
+  <select id="getCount" parameterType="com.jbt.bean.DriveLogInfo"  resultType="java.lang.Integer">
+  	select
+  		count(*)
+     from drive_log_info d inner join car_info c on d.sn = c.sn
+    where 
+    	c.sectorInfo in (select id from sector_info where managerInfo = #{managerId})
+  	  <if test="driveLogInfo.drivername != null and driveLogInfo.drivername != '' ">  
+           and d.drivername LIKE CONCAT(CONCAT('%', #{driveLogInfo.drivername}),'%') 
+      </if>
+      <if test="driveLogInfo.platenumber != null and driveLogInfo.platenumber != '' ">  
+          and d.platenumber LIKE CONCAT(CONCAT('%', #{driveLogInfo.platenumber}),'%')  
+      </if>
+      <if test="driveLogInfo.departuretime != null and driveLogInfo.departuretime != '' ">  
+          and d.departureTime BETWEEN #{driveLogInfo.departuretime} AND #{driveLogInfo.arrivetime}
+      </if>
+      <if test="sectorId != null and sectorId != 0 ">  
+          and c.sectorInfo = #{sectorId}
+      </if>
+  </select>
+  <!-- 批量操作 -  删除数据batchDelete  batchFinish -->
+   <delete id="batchDelete">
+        delete from car_info
+    	where id in
+        <foreach collection="array" item="checkId" index="index"
+            open="(" close=")" separator=",">
+            #{checkId}
+        </foreach>
+    </delete>
+    <select id="selectTotalOil" resultType="java.util.HashMap">
+	    select 
+		    c.plateNumber as plateNumber,
+		    sum(d.totalOil) as totalOil,
+		    sum(d.totalRavelTime) as totalRavelTime,
+		    sum(d.totalMileage) as totalMileage
+	    from 
+	    	car_info c inner join drive_log_info d on c.sn = d.sn 
+	    where
+	    	c.sectorInfo in (select id from sector_info where managerInfo = #{managerId}) 
+	    <if test="startTime != null and startTime != '' ">
+	    	and d.departureTime &gt; #{startTime}
+	    </if>
+	    <if test="endTime != null and endTime != '' ">
+	    	and d.arrivetime &lt; #{endTime}
+	    </if>
+	    <if test="sectorId != null and sectorId != 0 ">
+	    	and c.sectorInfo = #{sectorId}
+	    </if>
+	    group by c.plateNumber
+    </select>
+    
+	<!--  按年月日分组统计数据 -->
+    <select id="selectStatistical_car" resultType="java.util.HashMap">
+	    select 
+	    	<if test="dateType == 2">
+	    		DATE_FORMAT(departureTime,"%Y") as date,
+	    	</if>
+	    	<if test="dateType == 1">
+	    		DATE_FORMAT(departureTime,"%Y-%m") as date,
+	    	</if>
+	    	<if test="dateType == 0">
+	    		DATE_FORMAT(departureTime,"%Y-%m-%d") as date,
+	    	</if>
+		    sum(totalOil) as totalOil,
+		    sum(totalRavelTime) as totalRavelTime,
+		    sum(totalMileage) as totalMileage
+	    from 
+	    	drive_log_info 
+	    <where>
+	    	<if test="sn != null and sn != ''">
+                 sn = #{sn}
+            </if>
+		    <if test="startTime != null and startTime != '' ">
+		    	and departureTime &gt; #{startTime}
+		    </if>
+		    <if test="endTime != null and endTime != '' ">
+		    	and arrivetime &lt; #{endTime}
+		    </if>
+	    </where>
+		    <if test="dateType == 2">
+		    	group by DATE_FORMAT(departureTime, "%Y")
+	    	</if>
+	    	<if test="dateType == 1">
+	    		group by DATE_FORMAT(departureTime, "%Y-%m")
+	    	</if>
+	    	<if test="dateType == 0">
+	    		group by DATE_FORMAT(departureTime, "%Y-%m-%d")
+	    	</if>
+    </select>
+</mapper>

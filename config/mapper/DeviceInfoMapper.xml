@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jbt.dao.DeviceInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.jbt.bean.DeviceInfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="sn" property="sn" jdbcType="VARCHAR" />
+    <result column="telNum" property="telnum" jdbcType="VARCHAR" />
+    <result column="telSerialNum" property="telserialnum" jdbcType="VARCHAR" />
+    <result column="checkCode" property="checkcode" jdbcType="VARCHAR" />
+    <result column="deviceType" property="devicetype" jdbcType="VARCHAR" />
+    <result column="sectorInfo" property="sectorinfo" jdbcType="INTEGER" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="cardState" property="cardstate" jdbcType="INTEGER" />
+    <result column="adder" property="adder" jdbcType="VARCHAR" />
+    <result column="createDate" property="createdate" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, sn, telNum, telSerialNum, checkCode, deviceType, sectorInfo, state, cardState, 
+    adder, createDate
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from device_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from device_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.jbt.bean.DeviceInfo" >
+    insert into device_info (id, sn, telNum, 
+      telSerialNum, checkCode, deviceType, 
+      sectorInfo, state, cardState, 
+      adder, createDate)
+    values (#{id,jdbcType=INTEGER}, #{sn,jdbcType=VARCHAR}, #{telnum,jdbcType=VARCHAR}, 
+      #{telserialnum,jdbcType=VARCHAR}, #{checkcode,jdbcType=VARCHAR}, #{devicetype,jdbcType=VARCHAR}, 
+      #{sectorinfo,jdbcType=INTEGER}, #{state,jdbcType=INTEGER}, #{cardstate,jdbcType=INTEGER}, 
+      #{adder,jdbcType=VARCHAR}, #{createdate,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.jbt.bean.DeviceInfo" >
+    insert into device_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="sn != null" >
+        sn,
+      </if>
+      <if test="telnum != null" >
+        telNum,
+      </if>
+      <if test="telserialnum != null" >
+        telSerialNum,
+      </if>
+      <if test="checkcode != null" >
+        checkCode,
+      </if>
+      <if test="devicetype != null" >
+        deviceType,
+      </if>
+      <if test="sectorinfo != null" >
+        sectorInfo,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="cardstate != null" >
+        cardState,
+      </if>
+      <if test="adder != null" >
+        adder,
+      </if>
+      <if test="createdate != null" >
+        createDate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="sn != null" >
+        #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="telnum != null" >
+        #{telnum,jdbcType=VARCHAR},
+      </if>
+      <if test="telserialnum != null" >
+        #{telserialnum,jdbcType=VARCHAR},
+      </if>
+      <if test="checkcode != null" >
+        #{checkcode,jdbcType=VARCHAR},
+      </if>
+      <if test="devicetype != null" >
+        #{devicetype,jdbcType=VARCHAR},
+      </if>
+      <if test="sectorinfo != null" >
+        #{sectorinfo,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="cardstate != null" >
+        #{cardstate,jdbcType=INTEGER},
+      </if>
+      <if test="adder != null" >
+        #{adder,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        #{createdate,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jbt.bean.DeviceInfo" >
+    update device_info
+    <set >
+      <if test="sn != null" >
+        sn = #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="telnum != null" >
+        telNum = #{telnum,jdbcType=VARCHAR},
+      </if>
+      <if test="telserialnum != null" >
+        telSerialNum = #{telserialnum,jdbcType=VARCHAR},
+      </if>
+      <if test="checkcode != null" >
+        checkCode = #{checkcode,jdbcType=VARCHAR},
+      </if>
+      <if test="devicetype != null" >
+        deviceType = #{devicetype,jdbcType=VARCHAR},
+      </if>
+      <if test="sectorinfo != null" >
+        sectorInfo = #{sectorinfo,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="cardstate != null" >
+        cardState = #{cardstate,jdbcType=INTEGER},
+      </if>
+      <if test="adder != null" >
+        adder = #{adder,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        createDate = #{createdate,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jbt.bean.DeviceInfo" >
+    update device_info
+    set sn = #{sn,jdbcType=VARCHAR},
+      telNum = #{telnum,jdbcType=VARCHAR},
+      telSerialNum = #{telserialnum,jdbcType=VARCHAR},
+      checkCode = #{checkcode,jdbcType=VARCHAR},
+      deviceType = #{devicetype,jdbcType=VARCHAR},
+      sectorInfo = #{sectorinfo,jdbcType=INTEGER},
+      state = #{state,jdbcType=INTEGER},
+      cardState = #{cardstate,jdbcType=INTEGER},
+      adder = #{adder,jdbcType=VARCHAR},
+      createDate = #{createdate,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

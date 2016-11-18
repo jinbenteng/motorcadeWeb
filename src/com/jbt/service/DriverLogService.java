@@ -1,0 +1,1 @@
+package com.jbt.service;import com.jbt.bean.DriveLogInfo;public interface DriverLogService {		int insert(DriveLogInfo driverLog);		DriveLogInfo selectByPrimaryKey(Integer id);}

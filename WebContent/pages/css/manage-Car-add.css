@@ -1,0 +1,255 @@
+
+
+.input_SysCode{
+	ime-mode:disabled;
+}
+
+
+
+
+
+
+.btn_reset:active{
+	 background-color: #CCF;
+}
+.btn_submit:active{
+	 background-color: #CCF;
+}
+
+
+
+
+
+
+
+.manage-Car-add-main{
+	background:url(../img/login-bg.png);		
+	background-repeat: no-repeat;
+	background-size:100% 100%;	
+	height:100%;
+	width:100%;
+}
+.manage-Car-add-main-wrap{
+	border: 1px solid #ccc;
+    width: 60%;
+    height:90%;
+	background-color:#FFF;
+	border-radius: 10px;
+    margin: 1% auto;
+}
+.manage-Car-add-main-wrap-form{
+	width: 100%;
+    height:100%;
+}
+
+.manage-Car-add-info-sn{
+	width: 100%;
+	height:60%;
+	margin: 1% auto;
+
+}
+.input_SN{
+	width:40%;
+	height:70%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+}
+.input_importSN{
+		width:20%;
+	height:70%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+}
+
+.manage-Car-add-info-main-sn{
+
+	width: 100%;
+	height:12%;
+	margin: 1% auto;
+
+}
+.input_CarNum{
+	width:42%;
+	height:90%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+}
+.manage-Car-add-info-main-car{
+	
+	width: 100%;
+	height:37%;
+	margin: 1% auto;
+
+}
+.manage-Car-add-info-main-car-num{
+	width: 100%;
+	height:15%;
+	margin: 0.5% auto;
+	
+}
+.manage-Car-add-info-main-car-drivertype{
+	width: 100%;
+	height:15%;
+	margin: 1% auto;
+
+
+}
+
+.select-DriverType
+{
+	width:22%;
+	height:90%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	float:left;
+	margin: 0 3%;
+	text-align:center;
+}
+.manage-Car-add-info-main-car-seatnum{
+		width: 100%;
+	height:15%;
+	margin: 1% auto;
+
+}
+.select-SeatNum{
+		width:22%;
+	height:90%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	float:left;
+	margin: 0 3%;
+	text-align:center;
+}
+.manage-Car-add-info-main-car-carmodel{
+	width: 100%;
+	height:15%;
+	margin: 1% auto;
+	
+}
+.manage-Car-add-info-main-car-carmodel-select{
+	width:67%;
+	height:100%;
+	margin: 0 3%;
+	float:left;
+
+}
+.manage-Car-add-info-main-car-carmodel-select > select{
+	width:32%;
+	height:80%;
+	border-radius:5px;
+	border: 1px solid #ccc;
+
+	font-size:14px;
+	border:none;
+	
+	
+}
+.manage-Car-add-info-main-car-totalmileage{
+				width: 100%;
+	height:15%;
+	margin: 1% auto;
+
+}
+.input_Stafftel{
+	width:42%;
+	height:80%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+}
+.manage-Car-add-team-mian{
+	width:100%;
+	height:30%;
+
+}
+.manage-Car-add-team-class{
+	width:100%;
+	height:85%;
+
+}
+.manage-Car-add-team-class ul{
+	width:100%;
+	height:25%;
+
+
+}
+.manage-Car-add-team-class li{
+	width:100%;
+	height:100%;
+	
+
+}
+.manage-Car-add-team-class li select{
+	width:32%;
+	height:80%;
+	border-radius:5px;
+	border: 1px solid #ccc;
+	float:left;
+	font-size:14px;
+	border:none;
+	margin: 0 3%;
+	
+}
+.manage-Car-add-team-class li a{
+	width:20%;
+	height:40%;
+	border: 1px solid #ccc;
+}
+
+.manage-Car-add-submit{
+	height:10%;
+	width:100%;
+}
+.btn_submit{
+	width:30%;
+	height:80%;
+	border-radius:5px;
+	border:1px solid #CCC;
+	margin-left:10%;
+	font-size:14px;
+	color:#FFF;
+
+	float:left;
+}
+.btn_reset{
+	width:30%;
+	height:80%;
+	border-radius:5px;
+	border:1px solid #CCC;
+	margin-left:10%;
+	font-size:14px;
+	color:#FFF;
+	
+	float:left;
+}

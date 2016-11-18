@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jbt.dao.SectorInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.jbt.bean.SectorInfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="sectorNum" property="sectornum" jdbcType="VARCHAR" />
+    <result column="sectorName" property="sectorname" jdbcType="VARCHAR" />
+    <result column="tel" property="tel" jdbcType="VARCHAR" />
+    <result column="level" property="level" jdbcType="INTEGER" />
+    <result column="parentInfo" property="parentinfo" jdbcType="INTEGER" />
+    <result column="rootInfo" property="rootinfo" jdbcType="INTEGER" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="createDate" property="createdate" jdbcType="VARCHAR" />
+    <association property="managerinfo" column="managerInfo" select="com.jbt.dao.ManagerInfoMapper.selectByPrimaryKey"/>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, sectorNum, sectorName, managerInfo, tel, level, parentInfo, rootInfo, state, 
+    description, createDate
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sector_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sector_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.jbt.bean.SectorInfo" >
+    insert into sector_info (id, sectorNum, sectorName, 
+      managerInfo, tel, level, 
+      parentInfo, rootInfo, state, 
+      description, createDate)
+    values (#{id,jdbcType=INTEGER}, #{sectornum,jdbcType=VARCHAR}, #{sectorname,jdbcType=VARCHAR}, 
+      #{managerinfo.id,jdbcType=INTEGER}, #{tel,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER}, 
+      #{parentinfo,jdbcType=INTEGER}, #{rootinfo,jdbcType=INTEGER}, #{state,jdbcType=INTEGER}, 
+      #{description,jdbcType=VARCHAR}, #{createdate,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.jbt.bean.SectorInfo" >
+    insert into sector_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="sectornum != null" >
+        sectorNum,
+      </if>
+      <if test="sectorname != null" >
+        sectorName,
+      </if>
+      <if test="managerinfo != null" >
+        managerInfo,
+      </if>
+      <if test="tel != null" >
+        tel,
+      </if>
+      <if test="level != null" >
+        level,
+      </if>
+      <if test="parentinfo != null" >
+        parentInfo,
+      </if>
+      <if test="rootinfo != null" >
+        rootInfo,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="createdate != null" >
+        createDate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="sectornum != null" >
+        #{sectornum,jdbcType=VARCHAR},
+      </if>
+      <if test="sectorname != null" >
+        #{sectorname,jdbcType=VARCHAR},
+      </if>
+      <if test="managerinfo != null" >
+        #{managerinfo.id,jdbcType=INTEGER},
+      </if>
+      <if test="tel != null" >
+        #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null" >
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="parentinfo != null" >
+        #{parentinfo,jdbcType=INTEGER},
+      </if>
+      <if test="rootinfo != null" >
+        #{rootinfo,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        #{createdate,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jbt.bean.SectorInfo" >
+    update sector_info
+    <set >
+      <if test="sectornum != null" >
+        sectorNum = #{sectornum,jdbcType=VARCHAR},
+      </if>
+      <if test="sectorname != null" >
+        sectorName = #{sectorname,jdbcType=VARCHAR},
+      </if>
+      <if test="managerinfo != null" >
+        managerInfo = #{managerinfo.id,jdbcType=INTEGER},
+      </if>
+      <if test="tel != null" >
+        tel = #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null" >
+        level = #{level,jdbcType=INTEGER},
+      </if>
+      <if test="parentinfo != null" >
+        parentInfo = #{parentinfo,jdbcType=INTEGER},
+      </if>
+      <if test="rootinfo != null" >
+        rootInfo = #{rootinfo,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        createDate = #{createdate,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jbt.bean.SectorInfo" >
+    update sector_info
+    set sectorNum = #{sectornum,jdbcType=VARCHAR},
+      sectorName = #{sectorname,jdbcType=VARCHAR},
+      managerInfo = #{managerinfo.id,jdbcType=INTEGER},
+      tel = #{tel,jdbcType=VARCHAR},
+      level = #{level,jdbcType=INTEGER},
+      parentInfo = #{parentinfo,jdbcType=INTEGER},
+      rootInfo = #{rootinfo,jdbcType=INTEGER},
+      state = #{state,jdbcType=INTEGER},
+      description = #{description,jdbcType=VARCHAR},
+      createDate = #{createdate,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByManagerName" resultMap="BaseResultMap" parameterType="java.lang.String">
+  	select s.* from
+  	 sector_info s left join manager_info m 
+  	 on s.managerInfo = m.id 
+  	where
+  	 m.userName = #{managerName}
+  </select>
+  
+</mapper>

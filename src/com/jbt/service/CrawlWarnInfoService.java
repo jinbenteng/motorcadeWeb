@@ -1,0 +1,1 @@
+package com.jbt.service;import java.util.List;import com.jbt.bean.CrawlWarnInfo;public interface CrawlWarnInfoService {	int insert(CrawlWarnInfo crawlWarnInfo);	List<CrawlWarnInfo> searchById(String[] s);}

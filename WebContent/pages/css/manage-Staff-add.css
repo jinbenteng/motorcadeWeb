@@ -1,0 +1,167 @@
+
+
+
+
+
+.btn_reset:active{
+	 background-color: #CCF;
+}
+.btn_submit:active{
+	 background-color: #CCF;
+}
+
+
+
+
+.manage-Car-add-staff-main{
+		background:url(../img/login-bg.png);		
+	background-repeat: no-repeat;
+	background-size:100% 100%;	
+	height:100%;
+	width:100%;
+}
+.manage-Car-add-staff-main-wrap{
+	border: 1px solid #ccc;
+    width: 60%;
+    height:90%;
+	background-color:#FFF;
+	border-radius: 10px;
+    margin: 1% auto;	
+}
+.manage-Car-add-staff-main-wrap-form{
+	width: 100%;
+    height:100%;
+}
+.manage-Car-add-staff-main-wrap-form-info{
+	width: 100%;
+    height:40%;
+  
+}
+.manage-Car-add-staff-main-wrap-form-info-name{
+		width: 100%;
+    height:16%;
+
+}
+.manage-Car-add-staff-main-wrap-form-info-tel{
+			width: 100%;
+    height:16%;
+
+     margin: 1% auto;
+}
+.manage-Car-add-staff-main-wrap-form-info-sex{
+				width: 100%;
+    height:16%;
+
+     margin: 1% auto;
+}
+.manage-Car-add-staff-main-wrap-form-info-stafftype{
+					width: 100%;
+   height:16%;
+  
+     margin: 1% auto;
+}
+.manage-Car-add-staff-main-wrap-form-info-drivertype{
+	width: 100%;
+    height:16%;
+ 
+     margin: 1% auto;
+}
+.input_Staffname{
+	width:40%;
+	height:70%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+}
+.input_Stafftel{
+	width:40%;
+	height:70%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+}
+select{
+	width:20%;
+	height:70%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+}
+.manage-Staff-add-section{
+	width:100%;
+	height:30%;
+
+}
+.manage-Staff-add-section-team-class{
+	width:100%;
+	height:85%;
+}
+.manage-Staff-add-section-team-class ul{
+	width:100%;
+	height:24%;
+}
+.manage-Staff-add-section-team-class li{
+	width:100%;
+	height:100%;
+	
+
+}
+.manage-Staff-add-section-team-class select{
+	width:25%;
+	height:60%;
+	border-radius:5px;
+
+	float:left;
+	font-size:14px;
+	border:none;
+	margin: 0 3%;
+	
+}
+.manage-Staff-add-section-team-class li a{
+	width:20%;
+	height:40%;
+
+}
+
+ul>li{
+	list-style:none;
+}
+.manage-Staff-add-submit{
+	height:10%;
+	width:100%;
+}
+
+.btn_submit{
+	width:30%;
+	height:80%;
+	border-radius:5px;
+	border:1px solid #CCC;
+	margin-left:10%;
+	font-size:14px;
+	color:#FFF;
+
+	float:left;
+}
+.btn_reset{
+	width:30%;
+	height:80%;
+	border-radius:5px;
+	border:1px solid #CCC;
+	margin-left:10%;
+	font-size:14px;
+	color:#FFF;
+	
+	float:left;
+}

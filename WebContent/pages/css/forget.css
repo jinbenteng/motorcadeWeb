@@ -1,0 +1,128 @@
+.forget-main{
+	background:url(../img/login-bg.png);
+			
+	background-repeat: no-repeat;
+	background-size:100% 100%;	
+	height:100%;
+	width:100%;
+}
+
+.forget-login-container{
+	height:60%;
+	width:60%;
+	border: 1px solid #ccc;
+    border-radius: 10px;
+
+    margin: 5% auto;
+
+	background-color:#FFF;
+}
+.forget-login-container-form{
+	width:100%;
+	height:100%;
+}
+.forget-setpassword{
+    
+	width:100%;
+	height:50%;
+
+	
+}
+.forget-password{
+	width:100%;
+	height:20%;	
+	
+}
+.forget-password input{
+	width:40%;
+	height:70%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+}
+.forget-truepassword{
+	width:100%;
+	height:20%;
+	
+}
+.forget-setTel{
+	width:100%;
+	height:60%;
+	
+}
+.forget-setTel input{
+		width:40%;
+	height:70%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+}
+.forget-truepassword input{
+	width:40%;
+	height:70%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+}
+.reg-telValidate{
+	margin: 5% auto;
+	width:100%;
+	height:20%;
+
+}
+.forget-submit{
+	height:10%;
+	width:100%;
+}
+input{
+	width:40%;
+	height:30%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	margin-left:5%;
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+}
+.btn_submit:active{
+	 background-color: #CCF;
+}
+.btn_reset:active{
+	 background-color: #CCF;
+}
+
+.btn_submit{
+	width:30%;
+	height:100%;
+	border-radius:5px;
+	border:1px solid #CCC;
+	margin-left:10%;
+	font-size:14px;
+	color:#FFF;
+
+	float:left;
+}
+.btn_reset{
+	width:30%;
+	height:100%;
+	border-radius:5px;
+	border:1px solid #CCC;
+margin-left:10%;
+	font-size:14px;
+	color:#FFF;
+	
+	float:left;
+}

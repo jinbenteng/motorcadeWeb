@@ -1,0 +1,88 @@
+
+.manage-Car-allot-work{
+	width:100%;
+	height:100%;
+	float:right;
+
+}
+#form_batch_operation{
+	width:100%;
+	height:85%;
+
+	float:right;
+}
+.manage-Car-allot-work-table{
+	height:100%;
+	width:98%;
+	margin-top:15px; 
+	margin-left:5px; 
+}
+.manage-Car-allot-work-btn-add{
+	width:100px;
+	height:30px;
+	float:left;
+	font-size:16px;
+	color:#0CF;
+	margin-left:10px;
+}
+.manage-Car-allot-work-btn-del{
+	width:100px;
+	height:30px;
+	float:left;
+	font-size:16px;
+	color:#0CF;
+	margin-left:10px;
+}
+.manage-Car-allot-work-seach{
+	
+	height:100%;
+	width:70%;
+	float:left;
+
+}
+.manage-Car-allot-work-seach-driverinfoName{
+	padding-top:5px; 
+	margin-left: 10px;	
+	height:48%;
+	width:100%;	
+	
+}
+.manage-Car-allot-work-seach-input-driverinfoName{
+	width:60%;
+	height:100%;
+	border-radius:5px;
+	border:1px solid #CCC;
+	margin-left:5px;
+	font-size:14px;
+	color:#333;
+}
+.manage-Car-allot-work-seach-driverinfoTel{
+		margin-left: 10px;	
+	padding-top:5px;
+	height:48%;
+	width:100%;
+	
+
+}
+.manage-Car-allot-work-seach-input-driverinfoTel{
+	width:60%;
+	height:100%;
+	border-radius:5px;
+	border:1px solid #CCC;
+	margin-left:5px;
+	font-size:14px;
+	color:#333;
+}
+.manage-Car-allot-work-seach-btn-class{
+	width:25%;
+	height:50%;
+	float:left;
+	font-size:16px;
+	border-radius:10px;
+	margin-left: 10px;
+	margin-top: 10px;
+	background:#09F;
+	color:#FFF;
+	font-weight:bold;
+
+}

@@ -1,0 +1,117 @@
+.manage-car-add-importData-main{
+	background:url(../img/login-bg.png);		
+	background-repeat: no-repeat;
+	background-size:100% 100%;	
+	height:100%;
+	width:100%;
+}
+.manage-car-add-importData-main-wrap{
+
+    width: 60%;
+    height:30%;
+	background-color:#FFF;
+	border-radius: 10px;
+    margin: 5% auto;	
+}
+.manage-car-add-importData-main-wrap-from{
+	width: 100%;
+    height:100%;
+}
+.manage-Section-add-wrap{
+	width: 100%;
+    height:40%;
+/* border: 1px solid #000; */
+    margin: 5% auto;	
+}
+.manage-Section-add-wrap-fileImport{
+	width: 100%;
+    height:40%;
+	border: 1px solid #ccc;
+    margin: 5% auto;
+}
+.fileImport{
+	width:40%;
+	height:70%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+	float:left;
+}
+.importData{
+	width:20%;
+	height:70%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+	float:left;
+}
+.manage-Section-add-info{
+	width: 100%;
+    height:60%;
+	border: 1px solid #000;
+    margin: 5% auto;	
+}
+.manage-Section-add-info-SectionName{
+	width: 100%;
+    height:40%;
+
+  
+}
+.manage-Section-add-wrap-fileImport{
+	width: 100%;
+    height:40%;
+	
+
+}
+.manage-Section-add-wrap-check{
+	width: 100%;
+    height:60%;
+
+    
+}
+.manage-Section-add-info-SetSectionName input{
+	width:40%;
+	height:20%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+} 
+.manage-Staff-add-submit{
+	height:20%;
+	width:100%;
+	
+}
+.btn_submit{
+	width:25%;
+	height:100%;
+	border-radius:5px;
+	border:1px solid #CCC;
+	font-size:14px;
+	color:#FFF;
+	float:left;
+	
+}
+.btn_reset{
+	width:25%;
+	height:100%;
+	border-radius:5px;
+	border:1px solid #CCC;
+
+	font-size:14px;
+	color:#FFF;
+	margin-left:1%;
+	float:left;
+}

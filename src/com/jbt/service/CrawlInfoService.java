@@ -1,0 +1,1 @@
+package com.jbt.service;import com.jbt.bean.CrawlInfo;import com.jbt.util.Page;public interface CrawlInfoService {	int insert(CrawlInfo crawlInfo);		Page getCrawlList(CrawlInfo crawlInfo,Integer pageNow);}

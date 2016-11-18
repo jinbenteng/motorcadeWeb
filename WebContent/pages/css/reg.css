@@ -1,0 +1,189 @@
+
+
+.reg-main{
+	background:url(../img/login-bg.png);		
+	background-repeat: no-repeat;
+	background-size:100% 100%;	
+	height:100%;
+	width:100%;
+}
+.reg-wrap{
+	border: 1px solid #ccc;
+    width: 60%;
+    height:80%;
+	background-color:#FFF;
+	border-radius: 10px;
+    margin: 5% auto;
+}
+.reg-form{
+	width: 100%;
+    height:100%;
+}
+
+.reg-telValidate{
+	width: 100%;
+    height:13%;	
+     margin: 2% auto;
+   
+}
+.reg-userinfo-tel{
+   	height:50%;	
+  
+	width:100%;
+ 	margin: 2% auto;
+
+}
+.input_tel{
+	width:40%;
+	height:100%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+}
+.reg-userinfo{
+
+    height:30%;	
+    
+	width:100%;
+
+}
+.reg-userinfo-firmname{
+	width: 100%;
+    height:20%;	
+
+}
+.reg-userinfo-firmname input{
+	width:40%;
+	height:100%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+} 
+.reg-userinfo-firmaddress{
+	width: 100%;
+    height:20%;	
+
+    margin: 2% auto;
+}
+.city{
+	width:70%;
+	height:100%;
+    float:left;
+    margin-left:3%;
+
+}
+.reg-address-select > select{
+	width:23%;
+	height:90%;
+	border-radius:5px;
+	
+	font-size:14px;
+	border:none;
+	
+	
+}
+.reg-userinfo-firmaddress2{
+	width: 100%;
+    height:20%;	
+
+    margin: 2% auto;
+}
+.reg-userinfo-firmaddress2 input{
+	width:40%;
+	height:100%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+} 
+
+
+.reg-setpassword{
+
+    height:30%;	
+    
+	width:100%;
+
+}
+.reg-setpassword-username{
+	width: 100%;
+    height:30%;	
+    margin: 2% auto;
+
+}
+.reg-setpassword-username input{
+	width:40%;
+	height:70%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+}
+.reg-setpassword-pwd{
+	width: 100%;
+    height:30%;	
+    margin: 2% auto;
+
+}
+.reg-setpassword-pwd input{
+	width:40%;
+	height:70%;
+	border-radius:5px;
+	ime-mode:disabled;
+	font-size:14px;
+	
+	border:none;
+	background-color:transparent;
+	border: 1px solid #ccc;
+	margin: 0 3%;
+}
+.reg-submit{
+	height:10%;
+	width:100%;
+}
+.btn_submit{
+	width:30%;
+	height:100%;
+	border-radius:5px;
+	border:1px solid #CCC;
+	margin-left:10%;
+	font-size:14px;
+	color:#FFF;
+
+	float:left;
+}
+.btn_reset{
+	width:30%;
+	height:100%;
+	border-radius:5px;
+	border:1px solid #CCC;
+	margin-left:10%;
+	font-size:14px;
+	color:#FFF;
+	
+	float:left;
+}
+.btn_submit:active{
+	 background-color: #CCF;
+}
+.btn_reset:active{
+	 background-color: #CCF;
+}
